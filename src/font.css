@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  
+
+
+
+/* Default base font size */
+html {
+  font-size: 3vmin !important; /* Dynamic base font size */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 480px) {
+  html {
+      font-size: 4vmin; /* Adjust the base font size for small screens */
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 481px) and (max-width: 1024px) {
+
+  html {
+      font-size: 3vmin; /* Adjust the base font size for medium screens */
+  }
+}
+
+/* Larger screens (e.g., desktops) */
+@media (min-width: 1025px) {
+
+  html {
+      font-size: 2.5vmin; /* Adjust the base font size for large screens */
+  }
+}
+
+
+
+h1 {
+    font-size: 2.5rem !important; /* Scales with base font size */
+}
+
+h2 {
+    font-size: 2.25rem !important; /* Scales with base font size */
+}
+
+h3 {
+    font-size: 2rem !important; /* Scales with base font size */
+}
+
+h4 {
+    font-size: 1.75rem !important; /* Scales with base font size */
+}
+
+h5 {
+    font-size: 1.5rem !important; /* Scales with base font size */
+}
+
+h6 {
+    font-size: 1.25rem !important; /* Scales with base font size */
+}
+
+p, li, label, input, a, button {
+    font-size: 1rem !important; /* Scales with base font size */
+}
+
+small {
+    font-size: 0.75rem !important; /* Scales with base font size */
+}
+
+button{
+  line-height: 100%;
+}

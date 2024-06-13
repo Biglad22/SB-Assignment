@@ -1,0 +1,18 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './font.css';
+
+*, ::after, ::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  line-height: 100%;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
