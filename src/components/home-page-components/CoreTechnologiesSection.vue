@@ -26,18 +26,20 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
   import TechIcon from './TechIcon.vue';
-    import {TechIconsLinks} from '../../assets/TechIconsLinks';
+import { useServicesStore } from '../../stores/OurService';
 
   export default defineComponent({
     name :'CoreTechnologiesSection',
     components:{
         TechIcon
     },
-    data(){
+    setup(){
+        const store = useServicesStore();
         return{
-            techIcons : TechIconsLinks
+            techIcons : store.techIconsLinks
         }
     }
+    
   });
 </script>
 <style scoped>
