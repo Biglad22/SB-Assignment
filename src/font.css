@@ -6,7 +6,7 @@
 
 /* Default base font size */
 html {
-  font-size: calc(2vmin + 3px) !important; /* Dynamic base font size */
+  font-size: calc(2vmin + 4px) !important; /* Dynamic base font size */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -14,7 +14,7 @@ html {
 
 @media (max-width: 480px) {
   html {
-      font-size: calc(3vmin + 3px); /* Adjust the base font size for small screens */
+      font-size: calc(3vmin + 4px); /* Adjust the base font size for small screens */
   }
 }
 
@@ -22,7 +22,7 @@ html {
 @media (min-width: 481px) and (max-width: 1024px) {
 
   html {
-      font-size: calc(1.5vmin + 3px); /* Adjust the base font size for medium screens */
+      font-size: calc(1.5vmin + 4px); /* Adjust the base font size for medium screens */
   }
 }
 
@@ -30,7 +30,7 @@ html {
 @media (min-width: 1025px) {
 
   html {
-      font-size: calc(1.25vmin + 3px); /* Adjust the base font size for large screens */
+      font-size: calc(1.25vmin + 4px); /* Adjust the base font size for large screens */
   }
 }
 

@@ -22,13 +22,14 @@
       :type="type"
       :name="name"
       :placeholder="label"
+      v-model="value"
       :class="[
         form === 'bordered'
           ? 'border border-[#707070] focus:border-[#0E77FF] hover:border-black p-2'
           : ' bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black pt-0.5 pb-1 px-2 placeholder:text-transparent capitalize',
         'w-full peer leading-none focus:outline-none outline-none transition-all duration-300 ease-in-out'
       ]"
-      @change=""
+      @change="handleInputChange"
     />
 
     <textarea
@@ -36,7 +37,9 @@
       :required="required"
       :name="name"
       :placeholder="label"
+      v-model="value"
       rows="3"
+      @change="handleInputChange"
       :class="[
         form === 'bordered'
           ? 'border border-[#707070] focus:border-[#0E77FF] hover:border-black p-2'
@@ -94,6 +97,11 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'InputField',
+  data(){
+    return{
+      value : ''
+    }
+  },
   props: {
     name: {
       type: String,
@@ -123,7 +131,11 @@ export default defineComponent({
       default: 'bordered',
     },
   },
-  
+  methods:{
+    handleInputChange(){
+      this.$emit('onChange', this.value)
+    }
+  }
 });
 </script>
 
