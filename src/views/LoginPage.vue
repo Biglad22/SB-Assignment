@@ -8,7 +8,8 @@
             <form action="" class="flex flex-col gap-4 justify-center items-center">
                 <InputField name="email" label="email" required type="text" />
                 <InputField name="password" label="password" required type="password" forgetable />
-                <Button round title="login" outline="secondary" />
+                <Button round title="login" outline="secondary"  />
+                <a href="https://emmanueldashboard.netlify.app" class="captialize font-semibold">dashboard</a>
             </form>
         </div>
         
@@ -30,7 +31,7 @@
 <style scoped>
     .wrapper{
         background-image: url('../assets/images/login-sec-img.png');
-        background-position: 50% bottom;
+        background-position: -40vw bottom;
         background-size: cover;
         background-repeat: no-repeat;
         

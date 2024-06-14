@@ -1,7 +1,7 @@
 <template>
     <section class="flex items-start justify-center flex-col w-[100vw] h-[125vh] px-[var(--margin)] py-[10vmin]" >
         <NavBar /> 
-        <div class="w-full md:w-9/12 lg:w-8/12 xl:w-1/2">
+        <div class="w-full md:w-9/12 lg:w-8/12 xl:w-1/2 mb-6">
             <h1 class="text-white  capitalize font-medium leading-[120%] mb-4">
                 Lorem Ipsum is simply dummy text of the printing and typesetting.
             </h1>
@@ -30,7 +30,7 @@
     section{
         background-image: url('../../assets/images/hom-hero-sec.png');
         background-position: right bottom;
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
     }
 
