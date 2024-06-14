@@ -1,15 +1,15 @@
 export const TechIconsLinks = [
-    '/src/assets/icons/React-icon.svg',
-    '/src/assets/icons/Amazon_Web_Services_Logo.svg',
-    '/src/assets/icons/Google_Cloud_Logo.svg',
-    '/src/assets/icons/redux-logo.svg',
-    '/src/assets/icons/javascript.svg',
-    '/src/assets/icons/sf.svg',
-    '/src/assets/icons/Amazon_Web_Services_Logo-1.svg',
-    '/src/assets/icons/sf (2).svg',
-    '/src/assets/icons/redux-logo-1.svg',
-    '/src/assets/icons/nodejs.svg',
-    '/src/assets/icons/firestore.svg',
-    '/src/assets/icons/React-icon-1.svg',
-    '/src/assets/icons/javascript.svg'
+    '/icons/React-icon.svg',
+    '/icons/Amazon_Web_Services_Logo.svg',
+    '/icons/Google_Cloud_Logo.svg',
+    '/icons/redux-logo.svg',
+    '/icons/javascript.svg',
+    '/icons/sf.svg',
+    '/icons/Amazon_Web_Services_Logo-1.svg',
+    '/icons/sf (2).svg',
+    '/icons/redux-logo-1.svg',
+    '/icons/nodejs.svg',
+    '/icons/firestore.svg',
+    '/icons/React-icon-1.svg',
+    '/icons/javascript.svg'
 ]

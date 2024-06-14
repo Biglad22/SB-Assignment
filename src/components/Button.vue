@@ -1,12 +1,13 @@
 <template>
   <button
     v-if="!to"
-    :type="type"
+    :type
     :class="buttonClasses"
     class="capitalize px-4 py-2 max-w-fit"
     @click="handleAction"
   >
     <span class="lead-none">{{ title }}</span>
+    
   </button>
 
   <router-link
@@ -56,10 +57,10 @@ export default defineComponent({
     }
   },
   methods:{
-    handleAction(){
-      if(!this.action) return;
+    handleAction(e : Event){
       
-      return this.action();
+      if(!this.action) return;
+      return this.action(e);
     }
   },
   setup(props) {

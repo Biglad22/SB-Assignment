@@ -28,8 +28,9 @@
         },
         methods:{
             handleForm(e : Event){
-                e.preventDefault();
-                alert('clicked')
+                console.log('somthing happended');
+                console.log(e);
+                
             }
         }
     })
