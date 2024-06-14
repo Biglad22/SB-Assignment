@@ -19,14 +19,14 @@
         </div>
 
         <div class="flex justify-center flex-wrap gap-9">
-            <TechIcon v-for="(i, index) in techIcons" :isLight="index !== 1 "  :img="i" />
+            <TechIcon v-for="(i, index) in techIcons" :isLight="index !== 1 "  :src="i" />
         </div>
     </section>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue';
   import TechIcon from './TechIcon.vue';
-import { useServicesStore } from '../../stores/OurService';
+  import { useServicesStore } from '../../stores/OurService';
 
   export default defineComponent({
     name :'CoreTechnologiesSection',

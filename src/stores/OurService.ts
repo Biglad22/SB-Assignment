@@ -93,7 +93,7 @@ export const useServicesStore = defineStore('ourService', {
             imagePath: webLogo
         },
         techIconsLinks : [
-            reactLogo
+            reactLogo,
             '/src/assets/icons/Amazon_Web_Services_Logo.svg',
             '/src/assets/icons/Google_Cloud_Logo.svg',
             '/src/assets/icons/redux-logo.svg',

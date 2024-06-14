@@ -122,11 +122,8 @@ export default defineComponent({
       required: false,
       default: 'bordered',
     },
-    value:{
-      type : String,
-      required:true
-    }
   },
+  
 });
 </script>
 
