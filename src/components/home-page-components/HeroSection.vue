@@ -1,5 +1,5 @@
 <template>
-    <section class="flex items-start justify-center flex-col w-[100vw] h-[125vh] px-[var(--margin)] py-[10vmin]" >
+    <section class="flex items-start justify-center flex-col w-[100vw] h-[110vh]  sm:h-[125vh] px-[var(--margin)] py-[10vmin]" >
         <NavBar /> 
         <div class="w-full md:w-9/12 lg:w-8/12 xl:w-1/2 mb-6">
             <h1 class="text-white  capitalize font-medium leading-[120%] mb-4">

@@ -47,12 +47,18 @@
             background-size: auto 100vh, 45% auto, 60% auto;
         }
     }
+    @media (max-width: 560px) {
+        section {
+            height: 110vh;
+        }
+    }
     @media (max-width: 460px) {
         section{
             background-position: 150% center, 60vw 20vmin, 70vw bottom;
             background-size: auto 100vh, 45% auto, 60% auto;
         }
     }
+
 
     h6,p{
         text-shadow: 0 2px 4px rgba(0,0,0,0.1);

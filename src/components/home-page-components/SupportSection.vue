@@ -3,16 +3,27 @@
         <div id="shadowed-card" class="absolute bottom-[10vmin]  right-[var(--margin)] w-[80vw] md:w-[40vw] bg-white p-5">
             <h6 class="text-[#292929] font-semibold capitalize mb-4">send us message</h6>
             <form @submit="handleForm" action="https://formsubmit.co/emmanuelaberuagba22@email.com" method="POST" class="mb-4">
-                <InputField form="underlined" label="your email" required type="text" name="email"  />
-                <InputField form="underlined" label="your name" required type="text" name="full name"/>
-                <InputField form="underlined" label="phone number" required type="text" name="phone number"/>
-                <InputField label="subject"  type="textarea" form="underlined" name="subject"/>
+                <InputField @onChange="newValue => email = newValue" form="underlined" label="your email" required type="text" name="email"  />
+                <InputField @onChange="newValue => fullName = newValue"  form="underlined" label="your name" required type="text" name="full name"/>
+                <InputField @onChange="newValue => phoneNo = newValue"  form="underlined" label="phone number" required type="text" name="phone number"/>
+                <InputField @onChange="newValue => phoneNo = newValue"  form="underlined" label="subject" type="text" name="_subject"/>
+                <InputField @onChange="newValue => message = newValue" label="message"  type="textarea" form="underlined" name="message"/>
                 <div class="flex gap-2 my-4">
                     <input type="checkbox" name="get updates" id="get-updates" class="h-[2rem] w-[2rem] rounded"/>
                     <small class="flex-1">By sending this message, you confirm that you have read and agreed to our privacy-policy</small>
                 </div>
                 <Button title="submit" round fill="secondary" :action="handleForm" /> 
+
             </form>
+            <!---validation message-->
+            <small 
+                v-if="helperMsg !== ''" 
+                :class="`block w-full p-1 rounded-sm text-center font-medium capitalize ${error ? 'bg-red-100 text-red-800' 
+                : 'bg-green-100 text-green-800' }`"
+                >
+
+                {{ helperMsg }}
+            </small>
         </div>
     </section>
 </template>
@@ -30,16 +41,31 @@
             return{
                 email : '',
                 fullName: '',
-                phoneNo:''
+                phoneNo:'',
+                subject:'',
+                message:'',
+                error : true,
+                helperMsg : ''
             }
         },
         methods:{
+            validateInput(){
+
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                const phoneRegex = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+
+                //only checking required inputs
+                if(emailRegex.test(this.email) && this.fullName !== '' && phoneRegex.test(this.phoneNo)){
+                    return this.error = false
+                }else{
+                    return this.helperMsg = 'please fill all required fields correctly';
+                }
+            },
             handleForm(e : Event){
-                console.log('somthing happended');
-                console.log(this.email);
-                console.log(e);
-                
+                this.validateInput();
+                return this.helperMsg = 'submited, thank you' 
             }
+
         }
     })
 </script>

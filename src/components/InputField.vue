@@ -26,7 +26,7 @@
       :class="[
         form === 'bordered'
           ? 'border border-[#707070] focus:border-[#0E77FF] hover:border-black p-2'
-          : ' bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black pt-0.5 pb-1 px-2 placeholder:text-transparent capitalize',
+          : ' relative z-[5] bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black pt-0.5 pb-1 px-2 placeholder:text-transparent capitalize',
         'w-full peer leading-none focus:outline-none outline-none transition-all duration-300 ease-in-out'
       ]"
       @change="handleInputChange"
@@ -43,7 +43,7 @@
       :class="[
         form === 'bordered'
           ? 'border border-[#707070] focus:border-[#0E77FF] hover:border-black p-2'
-          : 'bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black py-1 px-2 placeholder:text-transparent capitalize',
+          : 'relative z-[5] bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black py-1 px-2 placeholder:text-transparent capitalize',
         'w-full peer leading-none focus:outline-none outline-none transition-all duration-300 ease-in-out'
       ]"
     ></textarea>
@@ -52,7 +52,7 @@
     <label
       v-if="form === 'underlined' && type !== 'textarea'"
       :for="name"
-      class="absolute left-2 transition-all duration-300 ease-in-out transform 
+      class="absolute  z-[5] left-2 transition-all duration-300 ease-in-out transform 
              peer-focus:bottom-6 
              peer-placeholder-shown:bottom-1   
              bottom-6 scale-8 flex items-center mb-1 justify-between"
@@ -72,7 +72,7 @@
     <label
       v-else-if="form === 'underlined' && type === 'textarea'"
       :for="name"
-      class="absolute left-2 transition-all duration-300 ease-in-out transform 
+      class="absolute z-[4] left-2 transition-all duration-300 ease-in-out transform 
              peer-focus:top-1
              peer-placeholder-shown:top-6   
              top-1 scale-8 flex items-center mb-1 justify-between"
