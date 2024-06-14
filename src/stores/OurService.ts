@@ -7,6 +7,14 @@ import cloudLogo from '/src/assets/icons/Google_Cloud_Logo.svg'
 
 //logos for technology stack
 import reactLogo from '/src/assets/icons/React-icon.svg'
+import amazonServices from '/src/assets/icons/Amazon_Web_Services_Logo.svg';
+import googleCloud from '/src/assets/icons/Google_Cloud_Logo.svg';
+import redux from '/src/assets/icons/redux-logo.svg';
+import javascript from '/src/assets/icons/javascript.svg';
+import sfOne from '/src/assets/icons/sf.svg';
+import amazonWeb from '/src/assets/icons/Amazon_Web_Services_Logo-1.svg';
+import node from '/src/assets/icons/nodejs.svg';
+import fireStore from '/src/assets/icons/firestore.svg';
 
 
 interface ServiceType {
@@ -94,18 +102,18 @@ export const useServicesStore = defineStore('ourService', {
         },
         techIconsLinks : [
             reactLogo,
-            '/src/assets/icons/Amazon_Web_Services_Logo.svg',
-            '/src/assets/icons/Google_Cloud_Logo.svg',
-            '/src/assets/icons/redux-logo.svg',
-            '/src/assets/icons/javascript.svg',
-            '/src/assets/icons/sf.svg',
-            '/src/assets/icons/Amazon_Web_Services_Logo-1.svg',
-            '/src/assets/icons/sf (2).svg',
-            '/src/assets/icons/redux-logo-1.svg',
-            '/src/assets/icons/nodejs.svg',
-            '/src/assets/icons/firestore.svg',
-            '/src/assets/icons/React-icon-1.svg',
-            '/src/assets/icons/javascript.svg'
+            amazonServices, 
+            googleCloud, 
+            redux, 
+            javascript, 
+            sfOne, 
+            amazonWeb, 
+            sfOne, 
+            redux, 
+            node, 
+            fireStore, 
+            reactLogo,
+            javascript
         ]
     }),
     actions: {
