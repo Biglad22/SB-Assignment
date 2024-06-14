@@ -3,7 +3,7 @@
         <div id="shadowed-card" class="absolute bottom-[10vmin]  right-[var(--margin)] w-[80vw] md:w-[40vw] bg-white p-5">
             <h6 class="text-[#292929] font-semibold capitalize mb-4">send us message</h6>
             <form @submit="handleForm" action="https://formsubmit.co/emmanuelaberuagba22@email.com" method="POST" class="mb-4">
-                <InputField form="underlined" label="your email" required type="text" name="email"/>
+                <InputField form="underlined" label="your email" required type="text" name="email" :value="email" />
                 <InputField form="underlined" label="your name" required type="text" name="full name"/>
                 <InputField form="underlined" label="phone number" required type="text" name="phone number"/>
                 <InputField label="subject"  type="textarea" form="underlined" name="subject"/>
@@ -26,10 +26,17 @@
             InputField, 
             Button
         },
+        data(){
+            return{
+                email : '',
+                fullName: '',
+                phoneNo:''
+            }
+        },
         methods:{
             handleForm(e : Event){
                 console.log('somthing happended');
-                console.log(e);
+                console.log(this.email);
                 
             }
         }

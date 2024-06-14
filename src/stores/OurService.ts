@@ -5,6 +5,9 @@ import mobiledev from '/src/assets/icons/firestore.svg';
 import brandLogo from '/src/assets/icons/sf.svg';
 import cloudLogo from '/src/assets/icons/Google_Cloud_Logo.svg'
 
+//logos for technology stack
+import reactLogo from '/src/assets/icons/React-icon.svg'
+
 
 interface ServiceType {
     title: string;
@@ -90,7 +93,7 @@ export const useServicesStore = defineStore('ourService', {
             imagePath: webLogo
         },
         techIconsLinks : [
-            '/src/assets/icons/React-icon.svg',
+            reactLogo
             '/src/assets/icons/Amazon_Web_Services_Logo.svg',
             '/src/assets/icons/Google_Cloud_Logo.svg',
             '/src/assets/icons/redux-logo.svg',

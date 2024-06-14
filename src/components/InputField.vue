@@ -28,6 +28,7 @@
           : ' bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black pt-0.5 pb-1 px-2 placeholder:text-transparent capitalize',
         'w-full peer leading-none focus:outline-none outline-none transition-all duration-300 ease-in-out'
       ]"
+      @change=""
     />
 
     <textarea
@@ -121,6 +122,10 @@ export default defineComponent({
       required: false,
       default: 'bordered',
     },
+    value:{
+      type : String,
+      required:true
+    }
   },
 });
 </script>
