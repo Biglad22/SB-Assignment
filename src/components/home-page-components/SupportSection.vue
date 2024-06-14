@@ -61,7 +61,7 @@
                     return this.helperMsg = 'please fill all required fields correctly';
                 }
             },
-            handleForm(e : Event){
+            handleForm(){
                 this.validateInput();
                 return this.helperMsg = 'submited, thank you' 
             }
