@@ -4,6 +4,8 @@
     import AboutUsSection from '../components/home-page-components/AboutUsSection.vue';
     import OurServiesSection from '../components/home-page-components/OurServiesSection.vue';
     import Footer from '../components/home-page-components/footer.vue';
+    import SupportSection from '../components/home-page-components/SupportSection.vue';
+    import CoreTechnologiesSection from '../components/home-page-components/CoreTechnologiesSection.vue';
 
     export default defineComponent({
         name: 'HomePage',
@@ -11,7 +13,9 @@
             HeroSection,
             AboutUsSection,
             OurServiesSection,
-            Footer
+            Footer,
+            SupportSection,
+            CoreTechnologiesSection
         }
     })
 </script>
@@ -21,6 +25,8 @@
         <HeroSection />
         <AboutUsSection />
         <OurServiesSection />
+        <CoreTechnologiesSection />
+        <SupportSection />
         <Footer />
     </div>
 </template>

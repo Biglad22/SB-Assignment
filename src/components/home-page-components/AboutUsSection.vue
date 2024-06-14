@@ -1,6 +1,6 @@
 <template>
-    <section class="relative">
-        <div class="absolute w-1/3 right-[15%] -translate-y-1/2 top-1/2 flex flex-col gap-4">
+    <section class="relative py-[20vmin]">
+        <div class="absolute  px-[var(--margin)] md:px-0 w-full xl:w-1/3 md:right-[var(--margin)] -translate-y-1/2 top-1/2 flex flex-col gap-4">
             <SectionTitle section="about us" header="Great Digital Agency"/>
             <h6 class="text-black leading-[150%]">
                 Our products are fully custom-made, built with the latest technologies and cloud-architectures.
@@ -33,8 +33,29 @@
         width: 100vw;
         height: 150vh;
         background-image: url('../../assets/images/login-sec-img.png'), url('../../assets/images/about-us-bg.png'), url('../../assets/images/about-us-bg2.png');
-        background-position: -70vw center, 80vw top, 85vw bottom;
-        background-size: 120vw auto, 25% auto,30% auto;
+        background-position: -40vw bottom, 80vw 20vmin, 85vw bottom;
+        background-size: auto 100%, 25% auto,30% auto;
         background-repeat: no-repeat, no-repeat, no-repeat;
     }
+
+    @media (max-width: 767px) {
+        section {
+            height: 120vh;
+        }
+        section{
+            background-position: 120% center, 60vw 20vmin, 70vw bottom;
+            background-size: auto 100vh, 45% auto, 60% auto;
+        }
+    }
+    @media (max-width: 460px) {
+        section{
+            background-position: 150% center, 60vw 20vmin, 70vw bottom;
+            background-size: auto 100vh, 45% auto, 60% auto;
+        }
+    }
+
+    h6,p{
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
 </style>

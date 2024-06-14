@@ -6,8 +6,8 @@
                 login to access dashboard
             </h4>
             <form action="" class="flex flex-col gap-4 justify-center items-center">
-                <InputField label="email" required type="text" />
-                <InputField label="email" required type="password" forgetable />
+                <InputField name="email" label="email" required type="text" />
+                <InputField name="password" label="password" required type="password" forgetable />
                 <Button round title="login" outline="secondary" />
             </form>
         </div>

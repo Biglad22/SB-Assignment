@@ -1,47 +1,137 @@
-
 <template>
+  <div :class="form === 'underlined' ? 'relative pt-6 w-full' : 'static pt-0 w-full'">
+    <label
+      v-if="form !== 'underlined'"
+      :for="name"
+      class="static pt-0 flex items-center mb-1 justify-between"
+    >
+      <span>
+        <small class="text-black capitalize font-medium after:content mr-1">{{ label }}</small>
+        <span v-if="required" class="text-red-500">*</span>
+      </span>
+      <button v-if="forgetable" type="button">
+        <small class="text-red-500 font-medium capitalize">
+          forgot {{ label }}?
+        </small>
+      </button>
+    </label>
 
-    <div class="w-full">
-        <label for="text" class=" flex items-center mb-1 justify-between">
-            <span>
-                <small class="text-black capitalize font-medium after:content mr-1">{{ label }}</small>
-                <span v-if="required" class="text-red-500">*</span>
-            </span>
+    <input
+      v-if="type !== 'textarea'"
+      :required="required"
+      :type="type"
+      :name="name"
+      :placeholder="label"
+      :class="[
+        form === 'bordered'
+          ? 'border border-[#707070] focus:border-[#0E77FF] hover:border-black p-2'
+          : ' bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black pt-0.5 pb-1 px-2 placeholder:text-transparent capitalize',
+        'w-full peer leading-none focus:outline-none outline-none transition-all duration-300 ease-in-out'
+      ]"
+    />
 
-            <button v-if="forgetable" type="button">
-                <small class="text-red-500 font-medium capitalize">forgot {{label}}?</small>
-            </button>  
-        </label>
-        <input :required :type class="border border-[#707070]  p-2 w-full focus:outline-none focus-within:outline-none focus:border-[#0E77FF] hover:border-black  transition-all duration-300 ease-in-out " />
-    </div>
+    <textarea
+      v-if="type === 'textarea'"
+      :required="required"
+      :name="name"
+      :placeholder="label"
+      rows="3"
+      :class="[
+        form === 'bordered'
+          ? 'border border-[#707070] focus:border-[#0E77FF] hover:border-black p-2'
+          : 'bg-transparent border-b border-b-black focus:border-b-[#0E77FF] hover:border-b-black py-1 px-2 placeholder:text-transparent capitalize',
+        'w-full peer leading-none focus:outline-none outline-none transition-all duration-300 ease-in-out'
+      ]"
+    ></textarea>
+
+
+    <label
+      v-if="form === 'underlined' && type !== 'textarea'"
+      :for="name"
+      class="absolute left-2 transition-all duration-300 ease-in-out transform 
+             peer-focus:bottom-6 
+             peer-placeholder-shown:bottom-1   
+             bottom-6 scale-8 flex items-center mb-1 justify-between"
+    >
+      <span>
+        <small class="text-black capitalize font-medium after:content mr-1">{{ label }}</small>
+        <span v-if="required" class="text-black">*</span>
+      </span>
+      <button v-if="forgetable" type="button">
+        <small class="text-black font-medium capitalize">
+          forgot {{ label }}?
+        </small>
+      </button>
+    </label>
+
+    <!-----label for textare----->
+    <label
+      v-else-if="form === 'underlined' && type === 'textarea'"
+      :for="name"
+      class="absolute left-2 transition-all duration-300 ease-in-out transform 
+             peer-focus:top-1
+             peer-placeholder-shown:top-6   
+             top-1 scale-8 flex items-center mb-1 justify-between"
+    >
+      <span>
+        <small class="text-black capitalize font-medium after:content mr-1">{{ label }}</small>
+        <span v-if="required" class="text-red-500">*</span>
+      </span>
+      <button v-if="forgetable" type="button">
+        <small class="text-black font-medium capitalize">
+          forgot {{ label }}?
+        </small>
+      </button>
+    </label>
+  </div>
 </template>
 
+
+
 <script lang="ts">
-    import {defineComponent} from 'vue';
+import { defineComponent } from 'vue';
 
-    export default defineComponent({
-        name: 'InputField',
-        props:{
-            label : {
-                type: String,
-                required: true
-            },
-            forgetable :{
-                type: Boolean,
-                required: false
-            },
-            type:{
-                type : String as ()=>'password' | 'text',
-                required: false,
-                default: 'text'
-            },
-            required:{
-                type : Boolean,
-                required: false,
-                default: false
-            }
-
-        }
-    })
-    
+export default defineComponent({
+  name: 'InputField',
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+    label: {
+      type: String,
+      required: true,
+    },
+    forgetable: {
+      type: Boolean,
+      required: false,
+    },
+    type: {
+      type: String as () => 'password' | 'text' | 'textarea',
+      required: false,
+      default: 'text',
+    },
+    required: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    form: {
+      type: String as () => 'bordered' | 'underlined',
+      required: false,
+      default: 'bordered',
+    },
+  },
+});
 </script>
+
+<style scoped>
+input::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+}
+</style>

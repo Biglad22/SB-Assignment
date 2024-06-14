@@ -4,3 +4,8 @@
     <path id="Path_35922" data-name="Path 35922" d="M37.036,18.518A18.518,18.518,0,1,0,18.518,37.036,18.518,18.518,0,0,0,37.036,18.518Zm-35.352,0A16.834,16.834,0,1,1,18.518,35.353,16.834,16.834,0,0,1,1.683,18.518Z" fill="#fff"/>
   </svg>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue';
+  
+  export default defineComponent({});
+</script>

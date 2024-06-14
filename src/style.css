@@ -16,3 +16,24 @@ button{
 ::-webkit-scrollbar{
   display: none;
 }
+
+:root{
+
+  /*page margin*/
+  --margin : 10vw;
+
+  /*shadows for cards*/
+  --shadow : 0 40px 60px #0E77FF26;
+  --shadow-l : 0 20px 40px #0E77FF26;
+}
+
+@media screen and (min-width:1470px) {
+  
+  :root{
+    --margin : calc( (100vw - 1270px) / 2 );
+  }
+}
+
+a{
+  line-height: 100%;
+}
