@@ -3,11 +3,11 @@
         <h6 class=" font-black uppercase text-white w-fit" >
             logo
         </h6>
-        <div :class="`flex items-center gap-3 justify-center absolute h-[100vh] top-0 right-0 z-40  pe-[var(--margin)] p-4 bg-[#0E77FF] flex-col w-fit ${menuOpen? 'translate-x-0' : 'translate-x-full'}  min-[1100px]:translate-x-0 min-[1100px]:bg-transparent min-[1100px]:p-0 min-[1100px]:h-fit min-[1100px]:flex-row min-[1100px]:static`">
-            <Button v-for="(i, index) in textBtns" :key="index" :title="i" text="primary" />
+        <div :class="`flex items-center gap-3 justify-center absolute h-[100vh] top-0 right-0 z-40  pe-[var(--margin)] p-4 bg-[#0E77FF] flex-col w-fit ${menuOpen? 'translate-x-0' : 'translate-x-full'}  min-[1100px]:translate-x-0 min-[1100px]:bg-transparent min-[1100px]:p-0 min-[1100px]:h-fit min-[1100px]:flex-row min-[1100px]:static transition-all duration-500 ease-in-out`">
+            <Button v-for="(i, index) in textBtns" :key="index" :to="i.path" :title="i.name" text="primary" />
             <Button title="login"  to="/login" fill="primary" />
         </div>
-        <MobileMenuBtn @onClick="handleMenuOpen"/>
+        <MobileMenuBtn @onClick="newValue => menuOpen = newValue"/>
     </nav>
 </template>
 <script lang="ts">
@@ -15,8 +15,13 @@
     import Button from '../Button.vue';
     import MobileMenuBtn from '../../assets/icons/MobileMenuBtn.vue';
 
+    interface TextBtnLinks{
+        name : string,
+        path : string
+    }
+
     interface Data {
-        textBtns : string[],
+        textBtns : TextBtnLinks[],
         menuOpen : boolean
     }
 
@@ -28,14 +33,9 @@
         },
         data():Data{
             return { 
-                textBtns: ['about', 'services', 'case studies', 'testimonials', 'contact'],
+                textBtns: [{name:'about', path: '/#about'}, {name:'services', path: '/#services'}, {name:'case studies', path: '#'}, {name: 'testimonials', path: '/#testimonials'}, {name: 'contact', path: '/#contact'}],
                 menuOpen : false 
             };
         },
-        methods:{
-            handleMenuOpen(newValue : boolean){
-                this.menuOpen = newValue;
-            }
-        }
     })
 </script>

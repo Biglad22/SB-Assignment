@@ -1,5 +1,5 @@
 <template>
-    <section class="w-[100vw] h-[100vh] py-[10vmin] bg-[#0e76ff09] ps-[var(--margin)] flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-[10vmin]">
+    <section id="services" class="w-[100vw] h-[100vh] py-[10vmin] bg-[#0e76ff09] ps-[var(--margin)] flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-[10vmin]">
 
         <div class=" sm:flex-1 flex flex-col h-fit gap-4">
             <SectionTitle header="Transforming your ideas into Reality"  section="our services" :class="'h-fit'" />

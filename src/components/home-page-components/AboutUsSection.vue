@@ -1,5 +1,5 @@
 <template>
-    <section class="relative py-[20vmin]">
+    <section id="about" class="relative py-[20vmin]">
         <div class="absolute  px-[var(--margin)] md:px-0 w-full xl:w-1/3 md:right-[var(--margin)] -translate-y-1/2 top-1/2 flex flex-col gap-4">
             <SectionTitle section="about us" header="Great Digital Agency"/>
             <h6 class="text-black leading-[150%]">

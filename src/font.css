@@ -65,7 +65,7 @@ p, li, label, input, a, button {
 }
 
 small {
-    font-size: 0.75rem !important; /* Scales with base font size */
+    font-size: 0.85rem !important; /* Scales with base font size */
 }
 
 button{

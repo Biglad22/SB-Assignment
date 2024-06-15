@@ -9,7 +9,7 @@
                 <InputField name="email" label="email" required type="text" />
                 <InputField name="password" label="password" required type="password" forgetable />
                 <Button round title="login" outline="secondary"  />
-                <a href="https://emmanueldashboard.netlify.app" class="captialize font-semibold">dashboard</a>
+                <a href="https://emmanueldashboard.netlify.app" target="_blank" class="captialize font-semibold">dashboard</a>
             </form>
         </div>
         

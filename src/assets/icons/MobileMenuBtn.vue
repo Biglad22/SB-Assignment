@@ -1,7 +1,6 @@
 <template>
-    
-    <button type="button" class @click="handleClick">
-        <span class="w-[1.5rem] h-[1.5rem] block bg-white shadow-md  rounded-"></span>
+    <button type="button"  @click="handleClick" class="relative z-[60] block min-[1100px]:hidden">
+        <span class="w-[1.5rem] h-[1.5rem] block bg-white shadow-md  rounded-full"></span>
     </button>
 </template>
 <script lang="ts">
@@ -17,7 +16,7 @@
         methods :{
             handleClick(){
                 this.clicked = !this.clicked;
-                this.$emit('onclick', this.clicked);
+                return this.$emit('onClick', this.clicked);
             }
         }
     })

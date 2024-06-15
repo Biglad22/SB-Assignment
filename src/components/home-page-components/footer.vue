@@ -25,7 +25,7 @@
                 <SitemapTitle title="our links" />
                 <SitemapLink v-for="(i, index) in links" :key="index" :title="i" />
             </div>
-            <div class="flex-1">
+            <div class="flex-1" id="contact">
                 <SitemapTitle title="contact us"/>
                 <ContactInfo info="Al. Dummyodl 124/23 floor 123 Banswara Street, 02-577 India.">
                     <template #icon>
