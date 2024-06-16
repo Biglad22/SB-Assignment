@@ -2,11 +2,11 @@
     <div>
         <span class=" flex flex-row gap-1 items-center">
             <PlayIcon />
-            <h6 class="uppercase font-semibold text-[#0E77FF] leading-[100%]">
+            <h6 class="shadowed uppercase font-semibold text-[#0E77FF] leading-[100%]">
                 {{ section }}
             </h6>
         </span>
-        <h4 class="font-semibold leading-[125%] text-black capitalize">
+        <h4 class="shadowed font-semibold leading-[125%] text-black capitalize">
             {{ header }}
         </h4>
     </div>
@@ -32,3 +32,9 @@
         }
     })
 </script>
+<style>
+    @import '../style.css';
+    .shadowed{
+        text-shadow: var(--shadow);
+    }
+</style>

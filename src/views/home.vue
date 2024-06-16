@@ -27,6 +27,6 @@
         <OurServiesSection />
         <CoreTechnologiesSection />
         <SupportSection />
-        <Footer />
+        <Footer :id="'contact'" />
     </div>
 </template>

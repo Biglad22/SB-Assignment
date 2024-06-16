@@ -68,10 +68,17 @@
             },
             handleForm(){
                 try{
-                    this.validateInput();
-                    (this.$refs.myForm as HTMLFormElement).submit();
 
-                    return this.helperMsg = 'submited, thank you';
+                    ///check to see if required data have ben entered
+                    const verified = this.validateInput();
+
+                    ///conditionally submit form if true
+                    if(verified){
+                        (this.$refs.myForm as HTMLFormElement).submit();
+
+                        this.error = false
+                        return this.helperMsg = 'submited, thank you';
+                    }
 
                 }catch(err){
                     return this.helperMsg = "something's wrong, try again" 
