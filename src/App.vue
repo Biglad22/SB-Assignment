@@ -4,12 +4,12 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
-    import LoginPage from './views/LoginPage.vue';
+    import Dashboard from './views/Dashboard.vue';
 
     export default defineComponent({
         name : 'App',
         components :{
-            LoginPage
+            Dashboard
         }
     })
 </script>

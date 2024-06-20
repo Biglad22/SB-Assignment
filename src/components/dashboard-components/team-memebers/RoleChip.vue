@@ -1,6 +1,6 @@
 <template>
-    <span class=" rounded-3xl text-[#0F77FA] bg-[#0f79fa0f] capitalize block w-fit px-4 py-2">
-        <p class="w-fit">{{ TMrole }}</p>
+    <span class=" rounded-3xl text-[#0F77FA] bg-[#0f79fa0f] capitalize block w-fit px-3 py-1">
+        <small class="w-fit leading-none">{{ TMrole }}</small>
     </span>
 </template>
 
@@ -12,7 +12,7 @@
         props:{
             TMrole : {
                 type : String,
-                required : false
+                required : true
 
             }
         }
