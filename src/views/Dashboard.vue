@@ -4,14 +4,14 @@
             <div class="flex justify-between items-start">
                 <div>
                     <h3>Dashboard</h3>
-                    <p class=" mt-2">
+                    <p class=" mt-2 text-[#8990AD]">
                         welcome back {{ activeUser.name.split(' ')[0] }}
                     </p>
                 </div>
                 <div class="flex justify-between items-center gap-4">
                     <Button title="add unit" fill="secondary" class="hidden md:block"/>
                     <img :src="activeUser.img" class="w-[2.4rem]" alt="andrew" />
-                    <p class="hidden md:block">
+                    <p class="hidden md:block text-[#8990AD]">
                         {{ activeUser.name }}
                     </p>
                 </div>
